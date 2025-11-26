@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hacked Interface</title>
+  <style>
+    body {
+      background-color: black;
+      color: lime;
+      font-family: 'Courier New', Courier, monospace;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    #console {
+      border: 1px solid lime;
+      padding: 20px;
+      margin: 30px auto;
+      width: 80%;
+      height: 400px;
+      overflow-y: scroll;
+      background-color: black;
+    }
+
+    .glitch {
+      animation: glitch 1s infinite;
+    }
+
+    @keyframes glitch {
+      0% {
+        text-shadow: -1px -1px 0 #ff0000, 1px 1px 0 #00ff00;
+      }
+
+      25% {
+        text-shadow: 1px -1px 0 #ff0000, -1px 1px 0 #00ff00;
+      }
+
+      50% {
+        text-shadow: -1px 1px 0 #ff0000, 1px -1px 0 #00ff00;
+      }
+
+      75% {
+        text-shadow: 1px 1px 0 #ff0000, -1px -1px 0 #00ff00;
+      }
+
+      100% {
+        text-shadow: -1px -1px 0 #ff0000, 1px 1px 0 #00ff00;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="glitch">SYSTEM MESSAGE: You Are Hacked!</h1>
+  <div id="console">
+    <p>Accessing system files...</p>
+    <p>Warning: Unauthorized access detected!</p>
+    <p>IP Address: 192.168.1.101</p>
+    <p>Location: Unknown</p>
+    <p>Exfiltration in progress...</p>
+    <p>Attempting to decrypt files...</p>
+    <p>Error: Access Denied!</p>
+    <p>Connection lost.</p>
+    <p>System shutting down...</p>
+  </div>
+  <footer>Hacked System Simulation by Qurashi Akeel</footer>
+</body>
+
+</html>
