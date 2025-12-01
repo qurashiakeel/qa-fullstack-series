@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration form</title>
+</head>
+
+<body>
+  <!-- 
+  <form action="https://google.com/search">
+    <input name="q" type="search">
+  </form>
+  -->
+
+  <h1>Registration Form</h1>
+
+  <form action="#">
+
+    <!-- Username -->
+    <label for="username">Username</label>
+    <input type="text" name="username" id="username" placeholder="username" required> <br> <br>
+
+    <!-- Email -->
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" placeholder="email" required> <br> <br>
+
+    <!-- Password -->
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" placeholder="password" required> <br> <br>
+
+    <!-- Gender (radio) -->
+    <p>Gender</p>
+    <label>
+      <input type="radio" name="gender" value="male">
+      Male
+    </label>
+    <label>
+      <input type="radio" name="gender" value="female">
+      Female
+    </label>
+    <label>
+      <input type="radio" name="gender" value="other">
+      Other
+    </label> <br> <br>
+
+    <!-- Interests -->
+    <p>Interests</p>
+    <label>
+      <input type="checkbox" name="interests" value="coding"> Coding
+    </label>
+    <label>
+      <input type="checkbox" name="interests" value="design"> Design
+    </label>
+    <label>
+      <input type="checkbox" name="interests" value="gaming"> Gaming
+    </label> <br> <br>
+
+    <!-- Age (number) -->
+    <label for="age">Age</label>
+    <input type="number" name="age" id="age" min="10" max="100"> <br> <br>
+
+    <!-- Date of Birth -->
+    <label for="dob">DoB</label>
+    <input type="date" name="dob" id="dob"> <br> <br>
+
+    <!-- Country (select dropdown) -->
+    <select name="country" id="country">
+      <option value="">Select your country</option>
+      <option value="india">India</option>
+      <option value="pakistan">Pakistan</option>
+      <option value="indonesia">Indonesia</option>
+      <option value="USA">USA</option>
+      <option value="UK">UK</option>
+      <option value="others">Others</option>
+    </select> <br> <br>
+
+    <!-- Profile pic -->
+    <label for="pp">Upload PP</label> <br>
+    <input type="file" accept="image/*" name="pp"> <br> <br>
+
+    <!-- About -->
+    <label for="about">About</label> <br>
+    <textarea name="about" id="about" rows="4" placeholder="Tell us about yourself"></textarea> <br> <br>
+
+    <input type="submit" value="Don't submit">
+  </form>
+</body>
+
+</html>
