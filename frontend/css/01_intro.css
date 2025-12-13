@@ -1,0 +1,24 @@
+/* session 1: intro to css */
+
+body {
+  background-color: black;
+}
+
+p {
+  color: blue;
+}
+
+/* apply to head section */
+strong {
+  text-decoration: underline;
+}
+
+#note {
+  background-color: indigo;
+  color: wheat;
+  padding: 1rem;
+}
+
+.reply {
+  text-decoration: underline;
+}
