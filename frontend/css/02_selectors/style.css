@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+#subscribe {
+  color: yellow;
+}
+
+div.card {
+  background-color: blue;
+  width: 15rem;
+  padding: 1rem;
+  h2,
+  p {
+    text-decoration: none;
+  }
+  p:hover {
+    color: chartreuse;
+  }
+}
+
+h1,
+p {
+  text-decoration: underline;
+}
+
+input[required] {
+  color: red;
+}
+
+input[pattern] {
+  color: green;
+}
+
+ul > li:nth-child(even) {
+  color: rgb(255, 255, 143);
+}
