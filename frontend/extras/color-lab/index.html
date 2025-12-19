@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akeel's Color Lab</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Akeel's Color Lab</h1>
+    <p class="sub">Use the Master Box to sync all cards, or edit local cards for fine-tuning.</p>
+
+    <div class="gallery" id="gallery"></div>
+
+    <div class="grid">
+      <div class="card" data-type="hx">
+        <div class="preview">
+          <div class="preview-fill" id="hex-prev"></div>
+        </div>
+        <h3>HEX</h3>
+        <div class="control"><span>Red</span><input type="range" id="hx-r-sl" min="0" max="255"><input type="text"
+            id="hx-r-in"></div>
+        <div class="control"><span>Green</span><input type="range" id="hx-g-sl" min="0" max="255"><input type="text"
+            id="hx-g-in"></div>
+        <div class="control"><span>Blue</span><input type="range" id="hx-b-sl" min="0" max="255"><input type="text"
+            id="hx-b-in"></div>
+        <div class="control"><span>Alpha</span><input type="range" id="hx-a-sl" min="0" max="255"><input type="text"
+            id="hx-a-in"></div>
+        <div class="output-group">
+          <input type="text" id="hx-out" class="code-input" placeholder="#HEX">
+          <button class="icon-btn" onclick="copyVal('hx-out')">📋</button>
+          <button class="icon-btn" onclick="saveCol('hx-out', 'hex-prev')">⭐</button>
+        </div>
+      </div>
+
+      <div class="card" data-type="rg">
+        <div class="preview">
+          <div class="preview-fill" id="rgb-prev"></div>
+        </div>
+        <h3>RGBA</h3>
+        <div class="control"><span>Red</span><input type="range" id="rg-r-sl" min="0" max="255"><input type="number"
+            id="rg-r-in"></div>
+        <div class="control"><span>Green</span><input type="range" id="rg-g-sl" min="0" max="255"><input type="number"
+            id="rg-g-in"></div>
+        <div class="control"><span>Blue</span><input type="range" id="rg-b-sl" min="0" max="255"><input type="number"
+            id="rg-b-in"></div>
+        <div class="control"><span>Alpha</span><input type="range" id="rg-a-sl" min="0" max="1" step="0.01"><input
+            type="number" id="rg-a-in" step="0.01"></div>
+        <div class="output-group">
+          <input type="text" id="rgb-out" class="code-input" placeholder="rgba()">
+          <button class="icon-btn" onclick="copyVal('rgb-out')">📋</button>
+          <button class="icon-btn" onclick="saveCol('rgb-out', 'rgb-prev')">⭐</button>
+        </div>
+      </div>
+
+      <div class="card" data-type="hs">
+        <div class="preview">
+          <div class="preview-fill" id="hsl-prev"></div>
+        </div>
+        <h3>HSL</h3>
+        <div class="control"><span>Hue °</span><input type="range" id="hs-h-sl" min="0" max="360"><input type="number"
+            id="hs-h-in"></div>
+        <div class="control"><span>Sat %</span><input type="range" id="hs-s-sl" min="0" max="100"><input type="number"
+            id="hs-s-in"></div>
+        <div class="control"><span>Light %</span><input type="range" id="hs-l-sl" min="0" max="100"><input type="number"
+            id="hs-l-in"></div>
+        <div class="control"><span>Alpha</span><input type="range" id="hs-a-sl" min="0" max="1" step="0.01"><input
+            type="number" id="hs-a-in" step="0.01"></div>
+        <div class="output-group">
+          <input type="text" id="hsl-out" class="code-input" placeholder="hsla()">
+          <button class="icon-btn" onclick="copyVal('hsl-out')">📋</button>
+          <button class="icon-btn" onclick="saveCol('hsl-out', 'hsl-prev')">⭐</button>
+        </div>
+      </div>
+
+      <div class="card" data-type="ok">
+        <div class="preview">
+          <div class="preview-fill" id="ok-prev"></div>
+        </div>
+        <h3>OKLCH</h3>
+        <div class="control"><span>Light</span><input type="range" id="ok-l-sl" min="0" max="1" step="0.01"><input
+            type="number" id="ok-l-in" step="0.01"></div>
+        <div class="control"><span>Chrom</span><input type="range" id="ok-c-sl" min="0" max="0.4" step="0.01"><input
+            type="number" id="ok-c-in" step="0.01"></div>
+        <div class="control"><span>Hue</span><input type="range" id="ok-h-sl" min="0" max="360"><input type="number"
+            id="ok-h-in"></div>
+        <div class="control"><span>Alpha</span><input type="range" id="ok-a-sl" min="0" max="1" step="0.01"><input
+            type="number" id="ok-a-in" step="0.01"></div>
+        <div class="output-group">
+          <input type="text" id="ok-out" class="code-input" placeholder="oklch()">
+          <button class="icon-btn" onclick="copyVal('ok-out')">📋</button>
+          <button class="icon-btn" onclick="saveCol('ok-out', 'ok-prev')">⭐</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="master-section">
+      <h2 style="margin:0 0 15px 0; color:var(--accent); text-align:center;">Universal Master Controller</h2>
+      <input type="text" class="universal-box" id="universal-input"
+        placeholder="Paste color (yellow, #f00, oklch(0.7 0.2 150)) and hit Enter">
+      <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));">
+        <div class="control"><span>M-Hue</span><input type="range" id="mH" min="0" max="360" value="200"></div>
+        <div class="control"><span>M-Sat</span><input type="range" id="mS" min="0" max="100" value="70"></div>
+        <div class="control"><span>M-Light</span><input type="range" id="mL" min="0" max="100" value="50"></div>
+        <div class="control"><span>M-Alpha</span><input type="range" id="mA" min="0" max="1" step="0.01" value="1">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
