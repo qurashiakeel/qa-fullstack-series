@@ -8,7 +8,7 @@
 0. This repo (access code for free): [github.com/qurashiakeel/qa-fullstack-series](https://github.com/qurashiakeel/qa-fullstack-series)
 1. Subscribe Youtube Channel: [youtube.com/@qurashiakeel](https://www.youtube.com/@qurashiakeel)
 2. Free CSS Color Lab for Youtube Subscribers: [click here](https://qurashiakeel.github.io/qa-fullstack-series/frontend/extras/color-lab/)
-   ![alt text](./frontend/extras/color-lab/preview.png)
+   ![preview image of the CSS color lab](./frontend/extras/color-lab/preview.png)
 
 ## Playlists:
 
