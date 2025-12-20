@@ -1,7 +1,7 @@
 # qa-fullstack-series
 
 > [!TIP]
-> This is the repo for _completely FREE_ fullstact development with Qurashi Akeel.
+> This is the repo for _completely FREE_ fullstack development with Qurashi Akeel.
 
 ## Resources:
 
