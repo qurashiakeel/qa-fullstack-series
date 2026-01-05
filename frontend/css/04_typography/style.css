@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body {
+  background-color: #1e293b;
+  color: rgb(255, 240, 213);
+}
+
+.card {
+  width: 22rem;
+  margin: 10rem auto;
+}
+
+.card-title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 900;
+}
+
+.card-body {
+  font-size: 0.8rem;
+  text-align: justify;
+  font-family: inter;
+  font-weight: 200;
+  line-height: 1.5;
+  letter-spacing: 0.02rem;
+}
+
+strong {
+  text-decoration: overline;
+  color: aqua;
+}
